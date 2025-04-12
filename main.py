@@ -2,7 +2,7 @@ import streamlit as st
 import base64
 def img_button(img_path):
     st.image(img_path, use_container_width=True)
-    if st.button("Go", key=img_path):
+    if st.button("Go", key=img_path, use_container_width=True):
         return True
 
 col1, col2, col3 = st.columns(3)
