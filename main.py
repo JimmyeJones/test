@@ -15,7 +15,7 @@ img_base64 = image_to_base64(img_path)
 # Display the image as a clickable link (fake button)
 st.markdown(f"""
     <a href="?clicked=true">
-        <img src="data:image/png;base64,{img_base64}" width="150" style="cursor:pointer;"/>
+        <img src="data:image/png;base64,{img_base64}" width="300" style="cursor:pointer;"/>
     </a>
 """, unsafe_allow_html=True)
 
