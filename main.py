@@ -1,7 +1,7 @@
 import streamlit as st
 
 # Load an image
-image_url = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png"
+image_url = "FAN.png"
 
 # Create a clickable image "button" using markdown
 clicked = st.markdown(f"""
