@@ -25,14 +25,25 @@ def img_button(img_path):
     if clicked:
         return True
 
+col1, col2, col3, col4 = st.columns(4)
+
+with col1:
+    if img_button("FAN.png"):
+        st.text("FAN clicked")
+
+with col2:
+    if img_button("FAN.png"):
+        st.text("FAN clicked")
+
+with col3:
+    if img_button("FAN.png"):
+        st.text("FAN clicked")
+        
+with col4:
+    if img_button("FAN.png"):
+        st.text("FAN clicked")
 
 
-if img_button("FAN.png"):
-    st.text("FAN clicked")
-if img_button("FAN.png"):
-    st.text("FAN clicked")
-if img_button("FAN.png"):
-    st.text("FAN clicked")
-if img_button("FAN.png"):
-    st.text("FAN clicked")
+
+
 
