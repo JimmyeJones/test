@@ -1,5 +1,6 @@
 import streamlit as st
 st.title("Title")
+select1 = False
 if st.button("Game 1"):
   select1 = 1
 if st.button("Game 2"):
