@@ -1,10 +1,8 @@
 import streamlit as st
 import base64
 def img_button(img_path):
-    # Your local image path
     
-    
-    # Convert image to base64
+    # Load local image and convert to base64
     def image_to_base64(img_path):
         with open(img_path, "rb") as f:
             data = f.read()
@@ -12,17 +10,18 @@ def img_button(img_path):
     
     img_base64 = image_to_base64(img_path)
     
-    # Display the image as a clickable link (fake button)
-    st.markdown(f"""
-        <a href="?clicked=true">
-            <img src="data:image/png;base64,{img_base64}" width="300" style="cursor:pointer;"/>
-        </a>
-    """, unsafe_allow_html=True)
+    # Use a form to simulate an image button
+    with st.form("image_button_form"):
+        # Fake image "button" using HTML and CSS
+        st.markdown(f"""
+            <button type="submit" style="border:none; background:none; padding:0;">
+                <img src="data:image/png;base64,{img_base64}" width="150" style="cursor:pointer;" />
+            </button>
+        """, unsafe_allow_html=True)
+        submitted = st.form_submit_button("hidden_button")  # label won't show
     
-    # Detect if clicked via URL query param
-    clicked = st.query_params.get("clicked") == "true"
-    
-    if clicked:
+    # Do something when image is clicked
+    if submitted:
         return True
 
 col1, col2, col3, col4 = st.columns(4)
