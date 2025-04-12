@@ -11,7 +11,7 @@ def img_button(img_path):
     img_base64 = image_to_base64(img_path)
     
     # Use a form to simulate an image button
-    st.image(img_base64)
+    st.image(img_path)
     if st.button("Go"):
         return True
 
