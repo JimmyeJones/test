@@ -1,13 +1,13 @@
 import streamlit as st
 st.title("Title")
 select1 = False
-if st.button("Game 1"):
+if st.button("Game 1", use_container_width=True):
   select1 = 1
-if st.button("Game 2"):
+if st.button("Game 2", use_container_width=True):
   select1 = 2
-if st.button("Game 3"):
+if st.button("Game 3", use_container_width=True):
   select1 = 3
-if st.button("Game 4"):
+if st.button("Game 4", use_container_width=True):
   select1 = 4
 st.session_state["selection1"] = select1
 if st.session_state["selection1"] == 1:
