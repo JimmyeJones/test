@@ -5,7 +5,8 @@ def img_button(img_path):
         st.image(img_path, use_container_width=True)
         if st.button("Go", key=img_path, use_container_width=True):
             return True
-st.title("A Geography Channel Productions", use_container_width=True)
+st.markdown("<h1 style='text-align: center;'>A Geography Channel Productions</h1>", unsafe_allow_html=True)
+
 col1, col2, col3 = st.columns(3)
 
 with col1:
